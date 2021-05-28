@@ -1,0 +1,30 @@
+// sql scripts //
+
+CREATE USER 'springstudent'@'localhost' IDENTIFIED BY 'springstudent';
+
+GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'localhost';
+
+
+// only want to show the table created and values//
+
+
+
+// sql query scripts , inserting data into the tables//
+
+CREATE DATABASE  IF NOT EXISTS `web_customer_tracker` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `web_customer_tracker`;
+
+DROP TABLE IF EXISTS `customer`;
+
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `customer` VALUES 
+	(1,'aswin','khatiwada','aswinkhatiwada@gmail.com'),
+	(2,'lionel','messi','lionelmessi@fcbarcelona.com'),
